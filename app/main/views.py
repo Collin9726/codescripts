@@ -12,3 +12,10 @@ def index():
 
     return render_template('index.html', quote=quote)
 
+
+@main.route('/admin')
+@login_required
+def admin():    
+
+    return render_template('admin.html')
+
