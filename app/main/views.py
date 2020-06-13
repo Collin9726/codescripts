@@ -4,6 +4,7 @@ from . import main
 from ..requests import get_quote
 from .forms import PostForm,CommentForm
 from ..models import Post,Comment
+from .. import db
 
 
 @main.route('/')
@@ -55,4 +56,27 @@ def blog_post(post_id):
     title = post.title
     return render_template('post.html',title = title, comments=comments, comment_form=form, post=post)
     
+
+
+@main.route('/post/update/<post_id>',methods = ['GET','POST'])
+@login_required
+def update_blog(post_id):
+    form=PostForm()
+    post = Post.query.filter_by(id = post_id).first()       
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.text = form.text.data
+        post.category = form.category.data        
+
+        db.session.add(post)
+        db.session.commit()
+       
+        return redirect(url_for('.blog_post', post_id=post_id))
+      
+    title = 'Update post'
+
+    return render_template('update_post.html', title=title, post_form=form, post=post)    
+
+
+
 
