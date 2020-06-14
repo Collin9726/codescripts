@@ -1,0 +1,5 @@
+export SECRET_KEY='secret_key'
+export MAIL_USERNAME='mail'
+export MAIL_PASSWORD='password'
+export DATABASE_URL_DEV='postgresql+psycopg2://username:password@localhost/database_name'
+export DATABASE_URL_TEST='postgresql+psycopg2://username:password@localhost/test_database_name'

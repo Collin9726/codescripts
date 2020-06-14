@@ -35,7 +35,7 @@
                                         <p><a href="{{url_for('main.category',cat='backend')}}">Backend</a></p>
                                         <p><a href="{{url_for('main.category',cat='fullstack')}}">FullStack</a></p>
                                         <p><a href="{{url_for('main.category',cat='mobile')}}">Mobile</a></p>
-                                        <p><a href="{{url_for('main.category',cat='devOps')}}">DevOps</a></p>                                    
+                                        <p><a href="{{url_for('main.category',cat='devOps')}}">DevOps</a></p>                                         
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
             <div class="jumbotron jumbotron2">                
                 <div class="row display-flex">
                     <div class="col-xs-12 border-b">
-                        <h2 class="pitch-head">Posts</h2>
+                        <h2 class="pitch-head">{{title}}</h2>
                     </div>
 
                     {{ macro.displayBlogs(posts) }}
