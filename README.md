@@ -1,3 +1,5 @@
+[![codebeat badge](https://codebeat.co/badges/f11f6c1c-12eb-4487-91e8-61ff10408c09)](https://codebeat.co/projects/github-com-collin9726-codescripts-master)
+
 # codescripts
 #### A blog website on software development, 15/06/2020
 #### By [Collin Owino](https://github.com/Collin9726)
